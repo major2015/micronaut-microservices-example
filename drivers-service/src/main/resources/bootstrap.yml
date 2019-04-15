@@ -3,11 +3,11 @@ micronaut:
     name: drivers-service
   server:
     port: 10012
-  config-clinet:
+  config-client:
     enabled: true
 
 consul:
   client:
-    defaultZone: 127.0.0.1:8500
+    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
     config:
       format: YAML

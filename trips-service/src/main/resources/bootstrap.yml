@@ -3,11 +3,13 @@ micronaut:
     name: trips-service
   server:
     port: 10011
-  config-clinet:
+  config-client:
     enabled: true
 
 consul:
   client:
-    defaultZone: 127.0.0.1:8500
+    registration:
+      enabled: true
+    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
     config:
       format: YAML

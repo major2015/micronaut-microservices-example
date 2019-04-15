@@ -3,11 +3,11 @@ micronaut:
     name: users-service
   server:
     port: 10010
-  config-clinet:
+  config-client:
     enabled: true
 
 consul:
   client:
-    defaultZone: 127.0.0.1:8500
+    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
     config:
       format: YAML

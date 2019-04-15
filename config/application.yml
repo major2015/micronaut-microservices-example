@@ -6,14 +6,25 @@ micronaut:
       swagger:
         paths: classpath:META-INF/swagger
         mapping: /swagger/**
+  session:
+    http:
+      redis:
+        enabled: true
+        namespace: 'micronaut_example:sessions'
+        write-mode: BACKGROUND
+        enable-keyspace-events: false
+        valueSerializer: io.micronaut.jackson.serialize.JacksonObjectSerializer
+
 endpoints:
   info:
     enabled: true
     sensitive: false
+
 consul:
   client:
     registration:
       enabled: true
+
 tracing:
   zipkin:
     enabled: true
@@ -21,3 +32,8 @@ tracing:
       url: http://127.0.0.1:9411
     sampler:
       probability: 1
+
+redis:
+  uri: redis://127.0.0.1
+  ssl: true
+  timeout: 30s
