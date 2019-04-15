@@ -1,8 +1,8 @@
 micronaut:
   application:
-    name: users-service
+    name: drivers-service
   server:
-    port: 10010
+    port: 10012
   config-clinet:
     enabled: true
 
