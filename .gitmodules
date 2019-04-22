@@ -1,9 +1,0 @@
-[submodule "users-service/src/main/proto"]
-	path = users-service/src/main/proto
-	url = https://github.com/IBlogLab/protobuf-core
-[submodule "drivers-service/src/main/proto"]
-	path = drivers-service/src/main/proto
-	url = https://github.com/IBlogLab/protobuf-core
-[submodule "trips-service/src/main/proto"]
-	path = trips-service/src/main/proto
-	url = https://github.com/IBlogLab/protobuf-core
