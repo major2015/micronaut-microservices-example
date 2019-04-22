@@ -36,3 +36,8 @@ antx.properties
 logs
 
 */git.properties
+
+trips-service/src/main/proto/
+users-service/src/main/proto/
+drivers-service/src/main/proto/
+
